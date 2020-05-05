@@ -24,8 +24,9 @@ map = folium.Map(location=[57.741411, 12.06958],
 fg = folium.FeatureGroup(name="Boulders")
 
 for lt, ln, ro, sta in zip(lat, lon, route, stars):
-    fg.add_child(folium.CircleMarker(location=[lt, ln], radius=10,
+    fg.add_child(folium.CircleMarker(location=[lt, ln], radius=6,
                                      popup=ro, fill_color=color_producer(sta), color='gray', fill=True, fill_opacity=0.5))
 map.add_child(fg)
+map.add_child(folium.LayerControl())
 
 map.save("Map1.html")
