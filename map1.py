@@ -27,8 +27,8 @@ def color_producer(score):
 map = folium.Map(location=[57.741411, 12.06958],
                  zoom_start=13, tiles="Stamen Terrain")
 
-fg = folium.FeatureGroup(name="Some Boulders")
-fg2 = folium.FeatureGroup(name="Utby Boulders")
+fg = folium.FeatureGroup(name="Some Routes")
+fg2 = folium.FeatureGroup(name="Utby Routes")
 
 for lt, ln, ro, sta in zip(lat, lon, route, stars):
     fg.add_child(folium.CircleMarker(location=[lt, ln], radius=6,
